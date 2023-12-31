@@ -1,4 +1,2 @@
-- refactor profiling module
-- unit tests (pytest)
-- use case diagram
+- create-git-commit-file
 - class diagram
