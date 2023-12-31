@@ -5,8 +5,8 @@
 You can `git clone` this project.
 
 ```shell
-git clone https://github.com/jai-python3/git-utils.git
-cd git-utils
+git clone https://github.com/jai-python3/git-helper-utils.git
+cd git-helper-utils
 ```
 
 ### Local pip install
@@ -28,7 +28,7 @@ You can uninstall like this:
 
 ```bash
 source venv/bin/activate
-pip uninstall git-utils
+pip uninstall git-helper-utils
 make clean
 ```
 
@@ -37,7 +37,7 @@ make clean
 If you modify the code in this package in your local virtual environment:
 
 ```shell
-pip uninstall git-utils
+pip uninstall git-helper-utils
 make clean
 python setup.py sdist
 pip install .
@@ -80,5 +80,5 @@ twine upload dist/*
 Now you can install your package in your Python virtual environment
 
 ```shell
-pip install git-utils
+pip install git-helper-utils
 ```

@@ -33,18 +33,18 @@ setup(
     description="Collection of Python utility scripts to facilitate git related tasks.",
     entry_points={
         'console_scripts': [
-            'create-git-branch=git_utils.create_git_branch:main',
+            'create-git-branch=git_helper_utils.create_git_branch:main',
         ],
     },
     install_requires=requirements,
     long_description=readme + '\n\n' + history,
     include_package_data=True,
-    keywords='git_utils',
-    name='git_utils',
-    packages=find_packages(include=['git_utils', 'git_utils.*']),
+    keywords='git-helper-utils',
+    name='git-helper-utils',
+    packages=find_packages(include=['git_helper_utils', 'git_helper_utils.*']),
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/jai-python3/git_utils',
+    url='https://github.com/jai-python3/git-helper-utils',
     version='0.1.0',
     zip_safe=False,
 )
