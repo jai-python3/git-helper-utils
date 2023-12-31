@@ -10,7 +10,10 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=7.0', ]
+requirements = [
+    'Click>=7.0',
+     "Rich"
+]
 
 test_requirements = [ ]
 
@@ -30,7 +33,7 @@ setup(
     description="Collection of Python utility scripts to facilitate git related tasks.",
     entry_points={
         'console_scripts': [
-            'git_utils=git_utils.cli:main',
+            'create-git-branch=git_utils.create_git_branch:main',
         ],
     },
     install_requires=requirements,
