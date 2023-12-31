@@ -34,6 +34,7 @@ setup(
     entry_points={
         'console_scripts': [
             'create-git-branch=git_helper_utils.create_git_branch:main',
+            'create-git-commit-file=git_helper_utils.create_git_commit_file:main',
         ],
     },
     install_requires=requirements,

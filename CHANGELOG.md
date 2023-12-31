@@ -1,16 +1,4 @@
-## [v0.1.0](https://github.com/jai-python3/tbd/tree/v0.1.0) - 2023-12-22
+## [v0.2.0](https://github.com/jai-python3/tbd/tree/v0.2.0) - 2023-12-31
 
 ADDS:
-- something
-- something else
-  
-CHANGES:
-- something
-- something else
-  
-FIXES:
-- something
-- something else
-  
-
-
+- create-git-commit-file: support for creating a git commit comment file that conforms to conventional commits

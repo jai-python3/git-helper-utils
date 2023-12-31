@@ -8,6 +8,7 @@ Collection of Python utility scripts to facilitate git related tasks.
   - [Installation](#installation)
   - [Exported scripts](#exported-scripts)
     - [create-git-branch](#create-git-branch)
+    - [create-git-commit-file](#create-git-commit-file)
   - [Contributing](#contributing)
   - [To-Do/Coming Next](#to-docoming-next)
   - [CHANGELOG](#changelog)
@@ -70,7 +71,43 @@ git branch -a
   remotes/origin/main
 ```
 
+### create-git-commit-file
 
+Sample invocation:
+
+```shell
+python git_helper_utils/create_git_commit_file.py
+--outdir was not specified and therefore was set to '/tmp/git-utils/create_git_commit_file/2023-12-31-144521'
+Created output directory '/tmp/git-utils/create_git_commit_file/2023-12-31-144521'
+--logfile was not specified and therefore was set to '/tmp/git-utils/create_git_commit_file/2023-12-31-144521/create_git_commit_file.log'
+--outfile was not specified and therefore was set to '/tmp/git-utils/create_git_commit_file/2023-12-31-144521/create_git_commit_file.txt'
+
+
+feat - A new feature for the user.
+fix - A bug fix.
+chore - Routine tasks, maintenance, and other non-user-facing changes.
+docs - Documentation changes.
+style - Code style changes (formatting, indentation).
+refactor - Code refactoring.
+test - Adding or modifying tests.
+ci - Changes to the project's CI/CD configuration.
+Please enter the type of commit: fix
+Please enter the scope of the commit [just press Enter if none]: 
+Please enter a one-line comment: FIXES bug in synth-bio component
+Please enter the issue identifier [Enter if none]: GNSB-1225
+Do you want to provide more details? [Y/n]:n
+
+Wrote commit comment file '/tmp/git-utils/create_git_commit_file/2023-12-31-144521/create_git_commit_file.txt'
+
+The log file is '/tmp/git-utils/create_git_commit_file/2023-12-31-144521/create_git_commit_file.log'
+Execution of '/home/sundaram/projects/git-utils/git_helper_utils/create_git_commit_file.py' completed
+
+
+cat /tmp/git-utils/create_git_commit_file/2023-12-31-144521/create_git_commit_file.txt
+fix: FIXES bug in synth-bio component
+
+GNSB-1225
+```
 
 ## Contributing
 
