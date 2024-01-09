@@ -6,6 +6,7 @@ Collection of Python utility scripts to facilitate git related tasks.
   - [Improvements](#improvements)
   - [Use Cases](#use-cases)
   - [Installation](#installation)
+  - [Generate shell wrapper scripts](#generate-shell-wrapper-scripts)
   - [Exported scripts](#exported-scripts)
     - [create-git-branch](#create-git-branch)
     - [create-git-commit-file](#create-git-commit-file)
@@ -34,6 +35,14 @@ Please see the [TODO](TODO.md) for a list of upcoming improvements.
 ## Installation
 
 Please see the [INSTALL](INSTALL.md) guide for instructions.
+
+## Generate shell wrapper scripts
+
+After executing `pip install git-helper-utils`, execute this exported script: `make_executables_and_aliases.py`.<br>
+This will create the wrapper shell scripts and a file containing aliases named `git-helper-utils-aliases.txt` in the current directory.<br><br>
+You can then add this line to your .bashrc or .zshrc:<br>
+`source dir/git-helper-utils-aliases.txt`<br>
+where dir is the directory that contains the aliases file.
 
 ## Exported scripts
 
