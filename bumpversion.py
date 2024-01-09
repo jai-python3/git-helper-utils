@@ -15,6 +15,8 @@ error_console = Console(stderr=True, style="bold red")
 
 console = Console()
 
+DEFAULT_PROJECT = os.path.basename(os.path.dirname(__file__))
+
 DEFAULT_BUMPVERSION_CONFIG_FILE = os.path.join(
     os.getcwd(),
     ".bumpversion.cfg"
@@ -29,7 +31,8 @@ DEFAULT_PRE_COMMIT_HOOK_FILE = os.path.join(
 
 DEFAULT_OUTDIR = os.path.join(
     "/tmp/",
-    "python-project-tools",
+    os.getenv("USER"),
+    DEFAULT_PROJECT,
     os.path.splitext(os.path.basename(__file__))[0],
     str(datetime.today().strftime("%Y-%m-%d-%H%M%S")),
 )
