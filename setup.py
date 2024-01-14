@@ -35,6 +35,7 @@ setup(
         'console_scripts': [
             'create-git-branch=git_helper_utils.create_git_branch:main',
             'create-git-commit-file=git_helper_utils.create_git_commit_file:main',
+            'make-git-helper-util-scripts-and-aliases=git_helper_utils.make_executables_and_aliases:main',
         ],
     },
     install_requires=requirements,

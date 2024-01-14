@@ -49,7 +49,7 @@ def create_aliases_file(wrapper_scripts: List[str], outdir: str, prefix: str = D
         wrapper_scripts (List[str]): list of wrapper scripts
         outdir (str): output directory
     """
-    outfile = os.path.join(outdir, "aliases.txt")
+    outfile = os.path.join(outdir, f"{DEFAULT_PROJECT}-aliases.txt")
 
     with open(outfile, 'w') as of:
         of.write(f"## method-created: {os.path.abspath(__file__)}\n")
@@ -76,8 +76,19 @@ def create_wrapper_script(infile: str, outdir: str) -> str:
         #     'SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"\n'
         # )
 
-        bin_dir = os.path.dirname(__file__)
+        bin_dir = os.path.join(
+            os.path.dirname(__file__),
+            "..",
+            "..",
+            "..",
+            "..",
+            "bin"
+        )
+
         activate_script = os.path.join(bin_dir, "activate")
+        if not os.path.exists(activate_script):
+            raise Exception(f"Activate script '{activate_script}' does not exist")
+
         of.write(f"source {activate_script}\n")
 
         of.write(f"python {bin_dir}/{os.path.basename(infile)} \"$@\"")
@@ -120,14 +131,37 @@ def main(outdir: str, alias_prefix: str):
 
     wrapper_scripts = []
 
+    bin_dir = os.path.join(
+        os.path.dirname(__file__),
+        "..",
+        "..",
+        "..",
+        "..",
+        "bin"
+    )
+
     for executable in EXECUTABLES:
-        console_script = os.path.join(os.path.dirname(__file__), executable)
+        console_script = os.path.join(bin_dir, executable)
+        # console_script = os.path.join(os.path.dirname(__file__), executable)
         if not os.path.exists(console_script):
             raise Exception(f"Console script '{console_script}' does not exist")
         wrapper_script = create_wrapper_script(console_script, outdir)
         wrapper_scripts.append(wrapper_script)
 
-    create_aliases_file(wrapper_scripts, outdir, alias_prefix)
+
+    alias_script_outdir = os.path.join(
+        os.path.dirname(__file__),
+        "..",
+        "..",
+        "..",
+        "..",
+        "..",
+    )
+
+    # print(alias_script_outdir)
+    # sys.exit(1)
+
+    create_aliases_file(wrapper_scripts, alias_script_outdir, alias_prefix)
 
     console.print(f"[bold green]Execution of {os.path.abspath(__file__)} completed[/]")
 
