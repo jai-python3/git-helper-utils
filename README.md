@@ -38,7 +38,7 @@ Please see the [INSTALL](INSTALL.md) guide for instructions.
 
 ## Generate shell wrapper scripts
 
-After executing `pip install git-helper-utils`, execute this exported script: `make_executables_and_aliases.py`.<br>
+After executing `pip install git-helper-utils`, execute this exported script: `make-git-helper-utils`.<br>
 This will create the wrapper shell scripts and a file containing aliases named `git-helper-utils-aliases.txt` in the current directory.<br><br>
 You can then add this line to your .bashrc or .zshrc:<br>
 `source dir/git-helper-utils-aliases.txt`<br>
