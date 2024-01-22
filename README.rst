@@ -14,7 +14,11 @@ Collection of Python utility scripts to facilitate git related tasks.
 Features
 --------
 
-* TODO
+The following exported consoler scripts are available:
+
+- create-git-branch
+- create-git-commit-file
+
 
 Credits
 -------

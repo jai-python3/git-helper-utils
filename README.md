@@ -1,8 +1,8 @@
 # git-helper-utils
-Collection of Python utility scripts to facilitate git related tasks.
+Collection of Python convenience utility scripts to facilitate git-related tasks.
+
 
 - [git-helper-utils](#git-helper-utils)
-  - [Motivation](#motivation)
   - [Improvements](#improvements)
   - [Use Cases](#use-cases)
   - [Installation](#installation)
@@ -17,15 +17,9 @@ Collection of Python utility scripts to facilitate git related tasks.
 
 
 
-## Motivation
-
-Explain what the motivation was for developing this package OR<br>
-explain how this package was improved after being forked.
-
-
 ## Improvements
 
-Please see the [TODO](TODO.md) for a list of upcoming improvements.
+Please see the [TODO](docs/TODO.md) for a list of upcoming improvements.
 
 
 ## Use Cases
@@ -34,7 +28,7 @@ Please see the [TODO](TODO.md) for a list of upcoming improvements.
 
 ## Installation
 
-Please see the [INSTALL](INSTALL.md) guide for instructions.
+Please see the [INSTALL](docs/INSTALL.md) guide for instructions.
 
 ## Generate shell wrapper scripts
 
@@ -46,7 +40,7 @@ where dir is the directory that contains the aliases file.
 
 ## Exported scripts
 
-The following exported scripts are available:
+The following exported consoler scripts are available:
 
 - create-git-branch
 - create-git-commit-file
@@ -125,12 +119,12 @@ to discuss what you would like to change.
 
 ## To-Do/Coming Next
 
-Please view the listing of planned improvements [here](TODO.md).
+Please view the listing of planned improvements [here](docs/TODO.md).
 
 ## CHANGELOG
 
-Please view the CHANGELOG [here](CHANGELOG.md).
+Please view the CHANGELOG [here](docs/CHANGELOG.md).
 
 ## License
 
-[GNU AFFERO GENERAL PUBLIC LICENSE](LICENSE)
+[GNU AFFERO GENERAL PUBLIC LICENSE](docs/LICENSE)

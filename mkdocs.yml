@@ -1,0 +1,55 @@
+site_name: Git Helper Utils
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: teal
+      accent: lime
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [git_helper_utils]
+nav:
+  - Home: index.md
+  - Installation: INSTALL.md
+  - Change Log: CHANGELOG.md
+  - Code Reference:
+  # INSERT CODE REFERENCE SECTION
+    - Create Git Branch: create_git_branch.md
+    - Create Git Commit File: create_git_commit_file.md
+  - TODO: TODO.md
+
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/jai-python3"  target="_blank" rel="noopener">Jai Python3</a>
